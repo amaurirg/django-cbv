@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Publishers</h2>
+    <ul>
+        {% comment %}
+        {% for publisher in object_list %}
+        object_list é o padrão do Django assim como o nome da view abaixo
+        {% endcomment %}
+        {% for publisher in publisher_list %}
+            <li>{{ publisher.name }}</li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Book List</h2>
+    <ul>
+        {% comment %}
+        {% for publisher in object_list %}
+        object_list é o padrão do Django assim como o nome da view abaixo
+        {% endcomment %}
+        {% for book in book_list %}
+            <li>{{ book.title}}</li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
